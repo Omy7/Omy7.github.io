@@ -1,0 +1,132 @@
+<!DOCTIPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+		SISTEMAS DE MEMORIA COMPARTIDA
+		</title>
+		
+		<body>
+		<div style ="background-image:url('Media/fondo.jpeg');
+			position:fixed; top:0; bottom:0; right:0; left:0;
+			background-repeat:no-repeat;
+			background-size:cover; 
+			z-index:-1">
+		</div>
+		<h3 style="color:white">  SISTEMAS DE MEMORIA COMPARTIDA </h3>
+		 <p style="text-aling:justify; font-style:italic; color:white">
+		 		 4.3 Sistemas de memoria compartida (multiprocesadores)
+				 <br>
+<br>* Todos los procesadores acceden a una memoria común.
+<br>* La comunicación entre procesadores se hace a través de la
+memoria.
+<br>* Se necesitan primitivas de sincronismo para asegurar el
+intercambio de datos.
+<br>
+<img width = "200px" height = "200px" src="Media/18.png">
+<br>
+Multiprocesadores de memoria compartida.
+<br>
+Estructura de los multiprocesadores de memoria compartida.
+La mayoría de los multiprocesadores comerciales son del tipo UMA
+(Uniform Memory Access): todos los procesadores tienen igual
+tiempo de acceso a la memoria compartida. En la arquitectura UMA
+los procesadores se conectan a la memoria a través de un bus, una
+red multietapa o un conmutador de barras cruzadas (red multietapa o
+un conmutador de barras cruzadas (crossbar crossbar) y disponen de
+su propia ) y disponen de su propia memoria caché. Los
+procesadores tipo NUMA (Non Uniform Memory Access) presentan
+tiempos de acceso a la memoria compartida que dependen de la
+ubicación del elemento de proceso y la memoria.
+<br>
+<img width = "400px" height = "200px" src="Media/18.1.png">
+<br>
+4.3.1 Redes de interconexión dinámica (indirecta).
+<br>
+Medio compartido.
+<br>
+Conexión por bus compartido.
+<br>
+Es la organización más común en los computadores personales y
+servidores.
+<br>
+El bus consta de líneas de dirección, datos y control para
+implementar:
+<br>* El protocolo de transferencias de datos con la memoria.
+<br>* El arbitraje del acceso al bus cuando más de un procesador
+compite por utilizarlo.
+<br>
+Los procesadores utilizan cachés locales para:
+<br>* Reducir el tiempo medio de acceso a memoria, como en un
+monoprocesador.
+<br>* Disminuir la utilización del bus compartido.
+<br>
+<img width = "400px" height = "200px" src="Media/18.2.png">
+<br>
+Multiprocesadores de memoria compartida: conexión por bus compartido.
+<br>
+Protocolos de transferencia de ciclo partido.
+<br>
+La operación de lectura se divide en dos transacciones no continuas
+de acceso al bus. La primera es de petición de lectura que realiza el
+máster (procesador) sobre el slave (memoria). Una vez realizada la
+petición el máster abandona el bus. Cuando el slave dispone del dato
+leído, inicia un ciclo de bus actuando como máster para enviar el
+dato al antiguo máster, que ahora actúa como slave.
+<br>
+<img width = "400px" height = "200px" src="Media/18.3.png">
+<br>
+Protocolos de transferencia de ciclo partido.
+<br>
+Protocolo de arbitraje distribuido
+<br>
+La responsabilidad del arbitraje se distribuye por los diferentes
+procesadores conectados al bus.
+<br>
+<img width = "400px" height = "200px" src="Media/18.4.png">
+<br>
+Protocolo de arbitraje distribuido.
+<br>
+Arbitro-i concede el bus al procesador Pi activando Gi si:
+<br>1. Pi ha activado su línea de petición de bus Ri.
+<br>2. La línea de ocupación está desactivada.
+<br>3. La línea de entrada de prioridad pi-1 está activada.
+<br>
+El árbitro i activa su línea de prioridad pi si:
+<br>1. Pi no ha activado su línea de petición Ri.
+<br>2. La línea de prioridad pi-1 está activa.
+<br>3. Finaliza una operación de acceso al bus.
+<br>
+Conmutadas.
+<br>
+Conexión por conmutadores crossbar.
+<br>
+Cada procesador (Pi) y cada módulo de memoria (Mi) tienen su
+propio bus. Existe un conmutador (S) en los puntos de intersección
+que permite conectar un bus de memoria con un bus de procesador.
+Para evitar conflictos cuando más de un procesador pretende acceder
+al mismo módulo de memoria se establece un orden de prioridad. Se
+trata de una red sin bloqueo con una conectividad completa pero de
+alta complejidad.
+<br>
+<img width = "400px" height = "200px" src="Media/18.5.png">
+<br>
+Multiprocesadores de memoria compartida: conexión por conmutadores crossbar.
+<br>
+Conexión por red multietapa.
+<br>* Representan una alternativa intermedia de conexión entre el
+bus y el crossbar.
+<br>* Es de menor complejidad que el crossbar pero mayor que el
+bus simple.
+<br>* La conectividad es mayor que la del bus simple pero menor
+que la del crossbar.
+<br>* Se compone de varias etapas alternativas de conmutadores
+simples y redes de interconexión.
+<br>
+<img width = "400px" height = "200px" src="Media/18.6.png">
+<br>
+En general las redes multietapa responden a este esquema.
+		 </p>
+		</body>
+	</head>
+</html>

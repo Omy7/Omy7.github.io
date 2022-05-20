@@ -1,0 +1,93 @@
+<!DOCTIPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+		MODOS DE DIRECCIONAMIENTO
+		</title>
+		
+		<body>
+		
+		<div style ="background-image:url('Media/fondo.jpeg');
+			position:fixed; top:0; bottom:0; right:0; left:0;
+			background-repeat:no-repeat;
+			background-size:cover; 
+			z-index:-1">
+		</div>
+		<h3 style="color:white">  MODO DE DIRECCIONAMIENTO </h3>
+		 <p style="text-aling:justify; font-style:italic; color:white">
+		 		 2.4. Modos de direccionamiento.
+				 <br>
+Distintas formas que tiene la arquitectura para especificar la ubicación de
+los operandos.
+<br>
+Objetivos:
+<br>
+<br>- Reducir el número de bits para especificar un operando en memoria.
+<br>- Dar soporte a las estructuras de datos de alto nivel.
+<br>
+Pueden ser:
+<br>- Para datos, sobre los que opera la instrucción.
+<br>- Para instrucciones, especifica la dirección de la siguiente instrucción
+a ejecutar (en instrucciones de control).
+<br>
+2.4.1. Necesidades de direccionamiento
+<br>
+Dónde puede estar un operando:
+<br>
+- En la propia instrucción
+<br>
+- En un registro - En memoria
+<br>
+<img width = "500px" height = "300px" src="Media/13.png">
+<br>
+Direccionamiento por registro.
+<br>
+El campo de dirección especifica un registro donde está el operando.
+<br>
+<img width = "300px" height = "300px" src="Media/13.1.png">
+<br>
+Direccionamiento Inmediato.
+<br>
+El operando está en la instrucción.
+<br>
+<img width = "300px" height = "300px" src="Media/13.2.png">
+<br>
+Direccionamiento directo.
+<br>
+El campo de dirección contiene la dirección efectiva del operando.
+<br>
+<img width = "300px" height = "300px" src="Media/13.3.png">
+<br>
+Direccionamiento indirecto por registro.
+<br>
+Se especifica un registro donde está la dirección del operando.
+<br>
+<img width = "300px" height = "300px" src="Media/13.4.png">
+<br>
+Direccionamiento indirecto por memoria.
+<br>
+El campo de direcciones contiene la dirección de una palabra donde está
+la dirección del operando.
+<br>
+<img width = "300px" height = "300px" src="Media/13.5.png">
+<br>
+Direccionamiento base + desplazamiento.
+<br>
+Combina posibilidades del directo (facilidad de uso) y del indirecto por
+registro (menos bits para especificar dirección). Habrá que especificar un
+registro y un valor. La suma del contenido del registro y el valor es la dirección
+del operando.
+<br>
+<img width = "300px" height = "300px" src="Media/13.6.png">
+<br>
+Direccionamiento indexado.
+<br>
+La dirección del operando es la suma de dos registros.
+<br>
+<img width = "300px" height = "300px" src="Media/13.7.png">
+<br>
+		 </p>
+		</body>
+	</head>
+</html>
